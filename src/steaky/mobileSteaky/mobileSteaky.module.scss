@@ -1,0 +1,61 @@
+@mixin transition($params...) {
+    -webkit-transition: $params;
+       -moz-transition: $params;
+         -o-transition: $params;
+            transition: $params;
+}
+
+
+
+
+.mobileBlock{
+    h1{
+        width: calc(100% - 40px);
+        height: 20px;
+        font-size: 20px;
+        text-align: left;
+        display: block;
+        font-weight: 300;
+        letter-spacing: 5px;
+        color: #fff;
+        margin: 10px 20px;
+        z-index: 10;
+    }
+    .mobilePhone{
+        width: 80%;
+        height: 80vh;
+        margin: 20px 10% 0;
+        background: url('/iPhone_11.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        float: left;
+        @include transition(ease-out .5s);
+    }
+    .curtains{
+        width: 100%;
+        position: absolute;
+        height: 80vh;
+        margin: 20px 0 0;
+        @include transition(ease-out .5s);
+        .columnRight, .columnLeft{
+            width: 60px;
+            height: 100%;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .columnRight span, .columnLeft span {
+            display: block;
+            width: 60px;
+            height: 60px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 60px;
+        }
+        .columnRight{
+            right: 0;
+        }
+    }
+}

@@ -1,0 +1,116 @@
+@mixin transition($params...) {
+    -webkit-transition: $params;
+       -moz-transition: $params;
+         -o-transition: $params;
+            transition: $params;
+}
+@import 'fixedOneCard.module.scss';
+
+.fixedContainer{
+    width: 100%;
+    position: relative;
+    float: left;
+    display: flex;
+    justify-content: center;
+    .mainBoard{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .centerBoard{
+            width: 100%;
+            .github{
+                width: 100%;
+                height: 82px;
+                display: flex;
+                justify-content: center;
+                .link{
+                    width: 180px;
+                    height: 82px;
+                    position: relative;
+                    background: url(/icons/goToGit.png);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    cursor: pointer;
+                    @include transition(ease-out 0.2s);
+                    &:hover{
+                        margin-top: -4px;
+                    }
+                }
+            }
+            h1{
+                width: calc( 100% - 40px );
+                margin: 10px 20px;
+                text-align: left;
+                display: block;
+                height: 20px;
+                font-size: 20px;
+                font-weight: 300;
+                letter-spacing: 5px;
+                color: #000;
+            }
+            .portfolio{
+                width: 800px;
+                height: 530px;
+                justify-content: center;
+                display: none;
+                @include oneCard;
+            }
+            .mobileSwipe{
+                display: block;
+                .slideBlock{
+                    width: 100%;
+                    height: 70vh;
+                    min-height: 500px;
+                    overflow: hidden;
+                    padding: 20px 0;
+                }
+                .oneSlide{
+                    float: left;
+                    width: inherit;
+                    height: 100%;
+                    @include oneCard;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media only screen and (min-width: 481px) {
+
+}
+
+
+
+@media only screen and (min-width: 769px) {
+    .fixedContainer{
+        min-height: 682px;
+        min-width: 1200px;
+        .mainBoard{
+            width: 1200px;
+            height: 682px;
+            .centerBoard{
+                width: 800px;
+                .github{
+                    width: 800px;
+                }
+                h1{
+                    width: 800px;
+                    height: 30px;
+                    font-size: 30px;
+                }
+                .portfolio{
+                    display: block;
+                    width: 800px;
+                    height: 530px;
+                    display: flex;
+                    justify-content: center;
+                }
+                .mobileSwipe{
+                    display: none;
+                }
+            }
+        }
+    }
+}

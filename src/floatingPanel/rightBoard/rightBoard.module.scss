@@ -1,0 +1,113 @@
+@mixin transition($params...) {
+    -webkit-transition: $params;
+       -moz-transition: $params;
+         -o-transition: $params;
+            transition: $params;
+}
+
+
+.rightBoard{
+    width: 200px;
+    height: 100vh;
+    min-height: 800px;
+    z-index: 100;
+    float: right;
+    .socialPanel{
+        width: 180px;
+        height: 40px;
+        padding: 10px;
+        margin-top: 100px;
+        .menuBlock{
+            @include transition(ease-out 0.4s)
+        }
+        .item{
+            width: 40px;
+            height: 40px;
+            margin-right: 6px;
+            background-image: url('/ico-sprite.png');
+            background-repeat: no-repeat;
+            float: left;
+            cursor: pointer;
+            color: #fff;
+            user-select: none;
+            span{
+                width: 40px;
+                height: 30px;
+                line-height: 30px;
+                display: block;
+            }
+            &:hover{
+                margin-top: -3px;
+                @include transition(ease-out 0.2s)
+            }
+        }
+        .menuBtn{
+            display: flex; /* используем flex для центрирования содержимого */
+            align-items: center;  /* центрируем содержимое кнопки */
+            position: relative;
+            width: 26px;
+            height: 26px;
+            margin-left: 10px;
+            float: right;
+            cursor: pointer;
+            z-index: 1;
+        }
+        /* добавляем "гамбургер" */
+        .menuBtn > span,
+        .menuBtn > span::before,
+        .menuBtn > span::after {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #ffffff;
+        }
+        .menuBtn > span::before {
+            content: '';
+            top: -8px;
+        }
+        .menuBtn > span::after {
+            content: '';
+            top: 8px;
+        }
+        .menuBtnOpen > span {
+            transform: rotate(45deg);
+        }
+        .menuBtnOpen > span::before {
+            top: 0;
+            transform: rotate(0);
+        }
+        .menuBtnOpen > span::after {
+            top: 0;
+            transform: rotate(90deg);
+        }
+
+        .menuBtnOpen > span,
+        .menuBtnOpen > span::before,
+        .menuBtnOpen > span::after {
+            @include transition(ease-out 0.2s)
+        }
+
+    }
+    .markerBlock{
+        width: 180px;
+        padding: 10px;
+        height: 520px;
+        bottom: 100px;
+        display: flex;
+        align-items: center;
+        .steakBlock{
+            div{
+                cursor: pointer;
+                margin: 40px 0;
+                padding: 5px 0;
+            }
+            span{
+                height: 1px;
+                background: #fff;
+                display: block;
+            }
+        }
+    }
+    
+}

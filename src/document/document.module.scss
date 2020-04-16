@@ -1,0 +1,124 @@
+.document{
+    width: 100%;
+    position: relative;
+    float: left;
+    display: flex;
+    justify-content: center;
+    background: #fff;
+    .mainBoard{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        .centerBoard{
+            width: 100%;
+            height: 100%;
+            h1{
+                width: calc( 100% - 40px);
+                margin: 10px 20px;
+                text-align: left;
+                display: block;
+                height: 20px;
+                font-size: 20px;
+                font-weight: 300;
+                letter-spacing: 5px;
+                color: #000;
+            }
+            .sheet{
+                width: 100%;
+                .header{
+                    width: calc(100% - 20px);
+                    height: 50px;
+                    line-height: 50px;
+                    font-size: 24px;
+                    margin: 30px 10px;
+                    text-align: left;
+
+                }
+                .plateCard{
+                    width: calc(100% - 20px);
+                    margin: 0 10px;
+                    .oneItem{
+                        width: calc(100% - 20px);
+                        padding: 0 10px;
+                        border-bottom: 1px dashed #000;
+                        font-size: 14px;
+                        line-height: 26px;
+                        text-align: left;
+                        .oneItemHalf{
+                            width: 100%;
+                            line-height: 26px;
+                        }
+                    }
+                }
+                .smallHeader{
+                    width: calc(100% - 20px);
+                    height: 30px;
+                    line-height: 30px;
+                    font-size: 18px;
+                    margin: 20px 10px;
+                    text-align: left;
+                    float: left;
+                }
+                .textPlate{
+                    width: calc(100% - 20px);
+                    margin: 10px;
+                    text-align: left;
+                    font-size: 14px;
+                    float: left;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width: 481px) {
+
+}
+
+
+
+@media only screen and (min-width: 769px) {
+    .document{
+        min-width: 1200px;
+        .mainBoard{
+            width: 1200px;
+            height: 800px;
+            .centerBoard{
+                width: 800px;
+                height: 800px;
+                h1{
+                    width: 800px;
+                    height: 30px;
+                    font-size: 30px;
+                }
+                .sheet{
+                    .header{
+                        width: 100%;
+                        font-size: 32px;
+                        margin: 30px 0;
+                    }
+                    .plateCard{
+                        width: 500px;
+                        .oneItem{
+                            line-height: 26px;
+                            float: left;
+                            .oneItemHalf{
+                                width: 50%;
+                                line-height: 26px;
+                                float: left;
+                            }
+                        }
+                    }
+                    .smallHeader{
+                        width: 100%;
+                        font-size: 24px;
+                        margin: 20px 0;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,145 @@
+@mixin transition($params...) {
+    -webkit-transition: $params;
+       -moz-transition: $params;
+         -o-transition: $params;
+            transition: $params;
+}
+
+
+
+.steakyContainer{
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    background: #0e0e0e;
+    float: left;
+    .steakyDiv{
+        .mobileView{
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
+        .centerPlate{
+            display: none;
+        }
+    }
+}
+
+
+
+@media only screen and (min-width: 481px) {
+    .mobileView{
+        display: none;
+    }
+}
+
+
+
+@media only screen and (min-width: 769px) {
+    .steakyContainer{
+        width: 100%;
+        height: 130vh;
+        min-width: 1200px;
+        min-height: 1200px;
+        background: #0e0e0e;
+        position: relative;
+        float: left;
+        border-radius: 0 0 30% 50% / 20% 30%;
+        .steakyDiv{
+            width: 100%;
+            height: 100vh;
+            min-width: 1200px;
+            min-height: 800px;
+            position: -webkit-sticky; 
+            position: sticky; 
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            .centerPlate{
+                width: 400px;
+                height: 200px;
+                position: absolute;
+                z-index: 11;
+                line-height: 200px;
+                font-size: 30px;
+                text-transform: uppercase;
+                letter-spacing: 6px;
+                text-align: center;
+                font-weight: 1;
+                color: #fff;
+                @include transition(ease-out 1s);
+                user-select: none;
+                display: block;
+            }
+            .attributes{
+                width: 800px;
+                height: 600px;
+                position: absolute;
+                z-index: 10;
+                @include transition(ease-out 1s);
+                .leftSide, .rightSide{
+                    width: 100px;
+                    height: 500px;
+                    position: absolute;
+                    top: 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                }
+                .rightSide{
+                    right: 0;
+                }
+                .bottomSide{
+                    width: 800px;
+                    height: 100px;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+                .leftSide span, .rightSide span, .bottomSide span{
+                    width: 100px;
+                    height: 100px;
+                    display: block;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: 70px;
+                }
+            }
+            .viewBox{
+                width: 660px;
+                height: 371px;
+                background: url("/MacBook.png");
+                background-size: 660px 371px;
+                position: relative;
+                .screenView{
+                    width: 498px;
+                    height: 310px;
+                    position: absolute;
+                    margin-left: 81px;
+                    margin-top: 22px;
+                    background: url("/code.png");
+                    background-size: contain;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    .grady{
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        background: -moz-linear-gradient(top,  rgba(14,14,14,1) 0%, rgba(0,0,0,0.5) 50%, rgba(14,14,14,1) 100%); /* FF3.6-15 */
+                        background: -webkit-linear-gradient(top,  rgba(14,14,14,1) 0%,rgba(0,0,0,0.5) 50%,rgba(14,14,14,1) 100%); /* Chrome10-25,Safari5.1-6 */
+                        background: linear-gradient(to bottom,  rgba(14,14,14,1) 0%,rgba(0,0,0,0.5) 50%,rgba(14,14,14,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e0e0e', endColorstr='#0e0e0e',GradientType=0 ); /* IE6-9 */
+                    }
+                }
+            }
+        }
+        .mobileView{
+            display: none;
+        }
+    }
+}
