@@ -18,7 +18,7 @@ export default class LeftBoard extends React.Component<any, any>  {
       <div className={style.leftBoard}>
           <div className={style.board}>
             <div className={style.toper}>
-              {this.props.language === 'ru' ? 'сколов' : 'skolov'}
+              {this.props.language === 'ru' ? 'синицын' : 'sinitsyn'}
             </div>
             <div className={style.title}>
               <div className={style.pagePosition}>0{this.props.currentPage + 1}</div>

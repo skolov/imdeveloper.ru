@@ -7,8 +7,8 @@ type headerProps = {
 }
 
 const TEXT = {
-  ru : 'Меня зовут Сколов Марк Андреевич, я web-разработчик. Занимаюсь разработкой web-интерфейсов различной сложности, версткой лендингов, адаптивных и мобильных версий сайтов.',
-  en : 'My name is Skolov Mark Andreevich, I am a web developer. I am engaged in the development of web-interfaces of varying complexity, making of the landings, adaptive and mobile versions of sites.'
+  ru : 'Меня зовут Синицын Максим Александрович, я web-разработчик. Занимаюсь разработкой web-интерфейсов различной сложности, версткой лендингов, адаптивных и мобильных версий сайтов.',
+  en : 'My name is Sinitsyn Maxim Alexandrovich, I am a web developer. I am engaged in the development of web-interfaces of varying complexity, making of the landings, adaptive and mobile versions of sites.'
 }
 
 

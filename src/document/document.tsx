@@ -107,7 +107,7 @@ export default class Document extends React.Component<any, any>  {
             <div className={style.sheet}>
 
               <div className={style.header}>
-                {this.props.language === 'ru' ? 'Сколов Марк Андреевич' : 'Skolov Mark Andreevich'} 
+                {this.props.language === 'ru' ? 'Синицын Максим Александрович' : 'Sinitsyn Maxim Alexandrovich'} 
               </div>
 
               <div className={style.plateCard}>
